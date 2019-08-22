@@ -1,0 +1,58 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+/*  
+ flex-direction: row => conteudo um ao lado do outro
+ flex-direction: column => conteudo um abaixo do outro
+
+ align-items => sempre alinha os itens no eixo oposto ao flex direction
+  ex. no row alinha na vertical e no column alinha na horizontal
+
+ justify-content => sempre alinha os itens no eixo do flex direction
+  ex. no row alinha na horizontal e no column alinha na vertical
+
+  align-content => sempre alinha os itens no eixo do flex direction
+  quando usamos o flex wrap = wrap
+  ex. no row alinha na horizontal e no column alinha na vertical
+*/
+#app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+}
+
+/* 
+ flex-grow => capacidade do componente aumentar para ocupar o espaço do
+ componente pai
+
+ flex-shrink => capacidade do componente diminuir para ocupar o espaço do
+ componente pai
+ */
+
+.box {
+  width: 200px;
+  height: 60px;
+  margin: 5px;
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+}
+
+.red {
+  background: #f00;
+  order: 1;
+}
+.green {
+  background: #0f0;
+  order: 2;
+}
+
+.blue {
+  background: #00f;
+  order: 0;
+}
